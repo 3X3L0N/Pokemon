@@ -1,0 +1,47 @@
+.buttonBar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #070707e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button:hover {
+  background-color: #98a711;
+  color: #fff;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333;
+}
+
+.navLink.active {
+  font-weight: bold;
+  background-color: #f7e600;
+  /* o */
+  border-bottom: 2px solid #f7e600;
+}
+
+.icon {
+  max-width: 50px;
+  height: auto;
+}
+
+.button:active {
+  transform: translateY(2px);
+}

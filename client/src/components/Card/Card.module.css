@@ -1,0 +1,55 @@
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  background-color: rgba(247, 230, 0, 0.6); /* Agregar transparencia al fondo */
+  transition: transform 0.3s;
+  border-radius: 20px; /* Agregar bordes redondeados */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-name {
+  font-weight: bold;
+  font-size: 1.2rem; /* Aumentar el tamaño del nombre */
+  margin-top: 5px; /* Espacio superior para separar el nombre de la imagen */
+  color: black;
+}
+
+.card-types {
+  margin-top: 5px; /* Espacio entre el nombre y los tipos */
+  color: #000000;
+}
+
+.card-button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px; /* Añadir bordes redondeados */
+  transition: background-color 0.3s, color 0.3s; /* Agregar animación de transición */
+}
+
+.card-button.favorite {
+  background-color: #f44336; /* Color de fondo para el botón de favoritos */
+  color: #fff; /* Color de texto para el botón de favoritos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agregar sombra */
+}
+
+.card-button.close {
+  background-color: #ccc; /* Color de fondo para el botón de cerrar */
+  color: #000; /* Color de texto para el botón de cerrar */
+}
+
+.card-button:hover {
+  background-color: #ff5722; /* Color de fondo al pasar el cursor */
+  color: #fff; /* Color de texto al pasar el cursor */
+}
