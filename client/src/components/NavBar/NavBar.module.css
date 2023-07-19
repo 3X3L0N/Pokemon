@@ -17,7 +17,7 @@
   transition: background-color 0.3s, color 0.3s;
 }
 .button:hover {
-  background-color: #98a711;
+  background-color: #ff0e0e;
   color: #fff;
 }
 
@@ -32,9 +32,9 @@
 
 .navLink.active {
   font-weight: bold;
-  background-color: #f7e600;
+  background-color: #ff0e0e;
   /* o */
-  border-bottom: 2px solid #f7e600;
+  border-bottom: 2px solid #ff0e0e;
 }
 
 .icon {

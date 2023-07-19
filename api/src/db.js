@@ -80,3 +80,7 @@ module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
   conn: sequelize, // para importar la conexión { conn } = require('./db.js');
 };
+
+//Los modelos "Pokemon" y "Types" se importan directamente utilizando require y luego se inicializan de manera explícita llamando a esas funciones con la instancia de Sequelize sequelize como argumento.//
+//los modelos se importan y se inicializan de manera explícita uno por uno
+//se configura servidor postgres utilizando sequelize

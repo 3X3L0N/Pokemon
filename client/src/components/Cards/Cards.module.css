@@ -13,29 +13,24 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 1%;
-
 }
-
 
 .paginationButton {
-  padding: 5px 10px;
-  margin: 0 5px;
-  background-color: #b8b4b4;
-  border: 1px solid #858383;
+  padding: 8px 15px;
+  background-color: #070707;
+  color: white;
+  border: none;
   border-radius: 50px;
   cursor: pointer;
-  background-color: #070707e5;
-  color: white;
+  transition: background-color 0.3s;
 }
 
-
 .disabledPaginationButton {
-  padding: 5px 10px;
-  margin: 0 5px;
-  background-color: #070707e5;
+  padding: 8px 15px;
+  background-color: #070707;
   color: white;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: not-allowed;
   opacity: 0.5;
 }
