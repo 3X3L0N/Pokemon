@@ -56,10 +56,12 @@ module.exports = {
 };
 */
 
+//configuracion de una DB postgres utiliazndo sequelize
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 
+//se crea una nueva instancia de sequelize
 const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`,
   {
@@ -67,11 +69,14 @@ const sequelize = new Sequelize(
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   }
 );
+
+//importan lo modelos utilizando require
 const PokemonModel = require("./models/Pokemon");
 const TypesModel = require("./models/Types");
-PokemonModel(sequelize);
+PokemonModel(sequelize); // se pasa sequelize como argumento
 TypesModel(sequelize);
 
+//relacion: un pokemon puede tener varios types y un type puede estar asociado con varios pokemon
 const { pokemon, type } = sequelize.models;
 pokemon.belongsToMany(type, { through: "pokemon_type" });
 type.belongsToMany(pokemon, { through: "pokemon_type" });
@@ -80,7 +85,3 @@ module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
   conn: sequelize, // para importar la conexión { conn } = require('./db.js');
 };
-
-//Los modelos "Pokemon" y "Types" se importan directamente utilizando require y luego se inicializan de manera explícita llamando a esas funciones con la instancia de Sequelize sequelize como argumento.//
-//los modelos se importan y se inicializan de manera explícita uno por uno
-//se configura servidor postgres utilizando sequelize

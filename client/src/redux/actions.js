@@ -109,7 +109,7 @@ export const crearPokemon = (pokemonData) => {
         "http://localhost:3001/pokemon/",
         pokemonData
       );
-      return dispatch(allPokemons());
+      return dispatch(allPokemons()); //llamo a la accion para actualiza  la lista
     } catch (error) {
       if (
         error.response &&

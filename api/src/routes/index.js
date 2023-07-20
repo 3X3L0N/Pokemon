@@ -57,3 +57,5 @@ router.all("*", (req, res) => {
 });
 
 module.exports = router;
+
+/*define un enrutador  en express y contiene varias rutas para cada solicitud HTTP : son 10 rutas*/

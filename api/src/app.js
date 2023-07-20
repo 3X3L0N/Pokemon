@@ -22,9 +22,9 @@ server.use((req, res, next) => {
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
 });
-server.use("/", routes);
+server.use("/", routes); //la ruta base de la API
 
-// Error catching endware.
+// middleware para el manejo de errores
 server.use((err, req, res, next) => {
   // eslint-disable-line no-unused-vars
   const status = err.status || 500;
@@ -34,3 +34,5 @@ server.use((err, req, res, next) => {
 });
 
 module.exports = server;
+
+/* configuracion basica de un servidor backend utilizando node y express*/
